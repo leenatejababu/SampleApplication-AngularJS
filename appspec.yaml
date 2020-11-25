@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-west-2:123456789012:task-definition/angular:5"
+        LoadBalancerInfo:
+          ContainerName: "angular"
+          ContainerPort: 80
